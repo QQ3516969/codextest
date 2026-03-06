@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import {
   useEffect,
   useRef,
@@ -384,7 +384,7 @@ export default function Home() {
             </button>
           </div>
           {uploadedImagePreview ? (
-            <Image
+            <NextImage
               src={uploadedImagePreview}
               alt="上传预览"
               width={320}
