@@ -1,0 +1,12 @@
+services:
+  drawguess:
+    container_name: drawguess
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.0-flash}
+      ZHIPU_API_KEY: ${ZHIPU_API_KEY:-}
+      ZHIPU_MODEL: ${ZHIPU_MODEL:-glm-4.6v-flash}
